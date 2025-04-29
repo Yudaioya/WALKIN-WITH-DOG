@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dog Walkersは、犬の散歩代行、ペットシッターサービスを提供する専門サービスです。愛犬のお散歩サポート、東京都中心にご予約受付中。">
+  <title>Dog Walkers - 犬の散歩代行・ペットシッターサービス（東京都対応）</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #f0f4f8;
+    }
+    header {
+      background: linear-gradient(90deg, #ffcc70, #ff9f29);
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+    .hero-image {
+      width: 100%;
+      height: 200px;
+      background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16') center/cover no-repeat;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff9f29;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    section {
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .plan-card, .review, .faq {
+      background: #f9f9f9;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .plan-card {
+      border-left: 5px solid #ffcc70;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    .faq-item[open] {
+      background: #d9f0ff;
+    }
+    .faq-item summary {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    .faq-item p {
+      margin: 0.5rem 0 0 1rem;
+      padding: 0.5rem;
+    }
+    .button {
+      display: inline-block;
+      background: #ff9f29;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+    }
+    .button:hover {
+      background: #ff7700;
+    }
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #ffcc70, #ff9f29);
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 0.5rem;
+      }
+      .hero-image {
+        height: 150px;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Dog Walkers - 犬の散歩代行サービス（東京都）</h1>
+  <p>あなたの大切なワンちゃんに、安心と愛情のお散歩サポートを。</p>
+</header>
+<div class="hero-image"></div>
+
+<nav>
+  <a href="#service">サービス紹介</a>
+  <a href="#plan">料金プラン</a>
+  <a href="#review">お客様の声</a>
+  <a href="#faq">よくある質問</a>
+  <a href="#contact">予約する</a>
+</nav>
+
+<main>
+
+  <section id="service">
+    <h2>犬の散歩代行・ペットシッターサービス紹介（東京都内対応）</h2>
+    <p>Dog Walkersは、忙しい飼い主様に代わり、経験豊富なスタッフが大切な愛犬のお散歩を代行します。東京都内を中心に、雨の日対応、多頭飼い対応も可能なペットシッターサービスをご提供しています。</p>
+  </section>
+
+  <section id="plan">
+    <h2>犬の散歩代行料金プラン（東京都エリア）</h2>
+    <div class="plan-card">
+      <h3>スタンダードプラン（60分）</h3>
+      <p>1回 2,000円（税込）</p>
+    </div>
+    <div class="plan-card">
+      <h3>延長オプション（30分）</h3>
+      <p>＋800円（税込）</p>
+    </div>
+    <p>※ご利用前に公式LINEでカウンセリングを行っています。</p>
+  </section>
+
+  <section id="review">
+    <h2>お客様の声 - 犬の散歩代行をご利用いただいた感想</h2>
+    <div class="review">
+      <p>"急な出張でも対応していただき助かりました。安心してお願いできました！"</p>
+      <small>女性・40代・M.Sさん</small>
+    </div>
+    <div class="review">
+      <p>"散歩だけでなく、ケアまでしてくれて本当にありがたかったです！"</p>
+      <small>男性・30代・K.Tさん</small>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>よくある質問（FAQ）</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Q. 散歩中に雨が降った場合はどうなりますか？</summary>
+        <p>A. 小雨程度であれば実施可能ですが、強い雨や雷など安全に支障が出る場合は中止または延期となります。</p>
+      </details>
+      <details class="faq-item">
+        <summary>Q. 散歩時間の指定は可能ですか？</summary>
+        <p>A. 事前のご相談により、できる限りご希望の時間帯に対応させていただきます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>Q. 支払い方法について教えてください。</summary>
+        <p>A. 現金支払いまたは銀行振込に対応しています。ご予約時にご案内いたします。</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>犬の散歩代行サービスご予約・お問い合わせ（東京都）</h2>
+    <p>Dog Walkersでは、公式LINEより犬の散歩代行サービス・ペットシッターサービスのご予約を承っています。東京都エリア対応。まずはお気軽にご相談ください！</p>
+    <a href="https://lin.ee/あなたのLINEリンク" class="button">LINEで予約する</a>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Dog Walkers - 犬の散歩代行・ペットシッターサービス（東京都） All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
